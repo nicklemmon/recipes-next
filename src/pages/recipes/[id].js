@@ -32,15 +32,17 @@ export default function RecipePage(props) {
       <p>From {source}</p>
 
       <ul>
-        {ingredients.map((ingredient, index) => {
-          return <li key={`ingredient-${index}`}>{ingredient}</li>
-        })}
+        {ingredients &&
+          ingredients.map((ingredient, index) => {
+            return <li key={`ingredient-${index}`}>{ingredient}</li>
+          })}
       </ul>
 
       <ol>
-        {steps.map((step, index) => {
-          return <li key={`step-${index}`}>{step}</li>
-        })}
+        {steps &&
+          steps.map((step, index) => {
+            return <li key={`step-${index}`}>{step}</li>
+          })}
       </ol>
     </div>
   )
