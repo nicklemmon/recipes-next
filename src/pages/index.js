@@ -1,5 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
+import recipes from '../recipes/*.yml'
+import { titleToId } from '../helpers'
 
 export default function Home() {
   return (
@@ -8,7 +10,15 @@ export default function Home() {
         <title>Nick and Laurie&rsquo;s Recipe Collection</title>
       </Head>
 
-      <div className="text-gray-400">Boo</div>
+      <ul>
+        {recipes.map((recipe, index) => {
+          return (
+            <li key={`recipe-${index}`}>
+              <a href={`/recipes/${titleToId(recipe.title)}`}>{recipe.title}</a>
+            </li>
+          )
+        })}
+      </ul>
     </>
   )
 }
