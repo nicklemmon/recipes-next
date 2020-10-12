@@ -1,6 +1,6 @@
 import React from 'react'
 import recipes from '../../recipes/*.yml'
-import { titleToId } from '../../helpers'
+import { titleToId } from 'src/helpers'
 
 export default function RecipePage(props) {
   const {

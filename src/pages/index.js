@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import recipes from '../recipes/*.yml'
-import { titleToId } from '../helpers'
+import { titleToId } from 'src/helpers'
 
 export default function Home() {
   return (
