@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import recipes from '../recipes/*.yml'
 import { titleToId } from 'src/helpers'
+import { PageLink } from 'src/components/links'
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
         {recipes.map((recipe, index) => {
           return (
             <li key={`recipe-${index}`}>
-              <a href={`/recipes/${titleToId(recipe.title)}`}>{recipe.title}</a>
+              <PageLink href={`/recipes/${titleToId(recipe.title)}`}>
+                {recipe.title}
+              </PageLink>
             </li>
           )
         })}
