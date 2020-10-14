@@ -1,4 +1,3 @@
-import fetch from 'unfetch'
 import fs from 'fs'
 import { join } from 'path'
 import yaml from 'js-yaml'
