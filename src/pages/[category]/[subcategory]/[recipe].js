@@ -4,6 +4,8 @@ import { CATEGORIES } from 'src/constants'
 import { Default } from 'src/components/layouts'
 
 export default function RecipePage({ recipe }) {
+  if (!recipe) return <p>Recipe not found</p>
+
   const {
     title,
     category,

@@ -5,6 +5,8 @@ import { Heading } from 'src/components/text'
 import { PageLink } from 'src/components/links'
 
 export default function CategoryPage({ category }) {
+  if (!category) return <p>Category not found.</p>
+
   return (
     <Default>
       <Heading as="h1">{category.name}</Heading>

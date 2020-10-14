@@ -6,6 +6,8 @@ import { Heading } from 'src/components/text'
 import { PageLink } from 'src/components/links'
 
 export default function SubcategoryPage({ category, subcategory, recipes }) {
+  if (!subcategory || !category) return <p>Subcategory not found.</p>
+
   return (
     <Default>
       <Heading as="h1">{subcategory.name}</Heading>
