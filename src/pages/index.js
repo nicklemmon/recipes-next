@@ -1,27 +1,45 @@
 import React from 'react'
 import Head from 'next/head'
-import recipes from '../recipes/*.yml'
-import { titleToId } from 'src/helpers'
+import { CATEGORIES } from 'src/constants'
+import { Default } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Nick and Laurie&rsquo;s Recipe Collection</title>
-      </Head>
+  // const { data, error } = useSWR('/api/recipes', fetcher)
 
-      <ul>
-        {recipes.map((recipe, index) => {
+  return (
+    <Default>
+      <Head>Nick &amp; Laurie&rsquo;s Recipe Collection</Head>
+
+      <div role="list">
+        {CATEGORIES.map((category, index) => {
           return (
-            <li key={`recipe-${index}`}>
-              <PageLink href={`/recipes/${titleToId(recipe.title)}`}>
-                {recipe.title}
-              </PageLink>
-            </li>
+            <div role="listitem" key={`category-${index}`}>
+              <PageLink href={`/${category.id}`}>{category.name}</PageLink>
+            </div>
           )
         })}
-      </ul>
-    </>
+      </div>
+
+      {/* {error && <p>D&rsquo;oh! Recipes failed to load.</p>}
+
+      {!data && <p>Loading...</p>}
+
+      <ul>
+        {data &&
+          data.map((recipe, index) => {
+            return (
+              <li key={`recipe-${index}`}>
+                <PageLink
+                  href={`/recipes/${titleToId(recipe.title)}`}
+                  className="flex w-full py-1 px-3"
+                >
+                  {recipe.title}
+                </PageLink>
+              </li>
+            )
+          })}
+      </ul> */}
+    </Default>
   )
 }
