@@ -1,33 +1,34 @@
 import React from 'react'
 import { CATEGORIES } from 'src/constants'
 import { titleToId, getAllRecipes } from 'src/helpers'
-import { Default } from 'src/components/layouts'
-import { Heading } from 'src/components/text'
+import { Page } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
 
 export default function SubcategoryPage({ category, subcategory, recipes }) {
   if (!subcategory || !category) return <p>Subcategory not found.</p>
 
   return (
-    <Default>
-      <Heading as="h1">{subcategory.name}</Heading>
+    <Page title={subcategory.name}>
+      {recipes.length === 0 && <p>No recipes here yet!</p>}
 
-      <div role="list">
-        {recipes.map((recipe, index) => {
-          return (
-            <div role="listitem" key={`recipe-${index}`}>
-              <PageLink
-                href={`/${category.id}/${subcategory.id}/${titleToId(
-                  recipe.title
-                )}`}
-              >
-                {recipe.title}
-              </PageLink>
-            </div>
-          )
-        })}
-      </div>
-    </Default>
+      {recipes.length > 0 ? (
+        <div role="list">
+          {recipes.map((recipe, index) => {
+            return (
+              <div role="listitem" key={`recipe-${index}`}>
+                <PageLink
+                  href={`/${category.id}/${subcategory.id}/${titleToId(
+                    recipe.title
+                  )}`}
+                >
+                  {recipe.title}
+                </PageLink>
+              </div>
+            )
+          })}
+        </div>
+      ) : null}
+    </Page>
   )
 }
 

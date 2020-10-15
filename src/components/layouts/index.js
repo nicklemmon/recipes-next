@@ -1,2 +1,2 @@
 export { default as Default } from './Default'
-export { default as Recipe } from './Recipe'
+export { default as Page } from './Page'

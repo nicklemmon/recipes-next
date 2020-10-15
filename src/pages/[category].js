@@ -1,16 +1,13 @@
 import React from 'react'
 import { CATEGORIES } from 'src/constants'
-import { Default } from 'src/components/layouts'
-import { Heading } from 'src/components/text'
+import { Page } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
 
 export default function CategoryPage({ category }) {
   if (!category) return <p>Category not found.</p>
 
   return (
-    <Default>
-      <Heading as="h1">{category.name}</Heading>
-
+    <Page title={category.name}>
       <div role="list">
         {category.subcategories.map((subcategory, index) => {
           return (
@@ -22,7 +19,7 @@ export default function CategoryPage({ category }) {
           )
         })}
       </div>
-    </Default>
+    </Page>
   )
 }
 

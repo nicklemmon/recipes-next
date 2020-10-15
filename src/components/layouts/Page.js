@@ -4,7 +4,7 @@ import { SITE_TITLE } from 'src/constants'
 import { Default } from 'src/components/layouts'
 import { Heading } from 'src/components/text'
 
-export default function Recipe({ title, children }) {
+export default function Page({ title, children }) {
   return (
     <>
       <Head>
