@@ -1,3 +1,5 @@
+export const SITE_TITLE = "Nick & Laurie's Recipe Collection"
+
 export const CATEGORIES = [
   {
     name: 'Main Dish',

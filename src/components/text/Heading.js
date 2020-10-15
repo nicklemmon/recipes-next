@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 export default function Heading({ as, looksLike, children, className }) {
-  const baseClassNames = looksLike
+  const looksLikeClassNames = looksLike
     ? getHeadingClassNames(looksLike)
     : getHeadingClassNames(as)
   const ariaLevel = as.replace('h', '')
@@ -11,7 +11,7 @@ export default function Heading({ as, looksLike, children, className }) {
     <div
       role="heading"
       aria-level={ariaLevel}
-      className={classNames(baseClassNames, className)}
+      className={classNames('font-semibold', looksLikeClassNames, className)}
     >
       {children}
     </div>
@@ -21,17 +21,17 @@ export default function Heading({ as, looksLike, children, className }) {
 function getHeadingClassNames(heading) {
   switch (heading) {
     case 'h1':
-      return ''
+      return 'text-4xl'
     case 'h2':
-      return ''
+      return 'text-3xl'
     case 'h3':
-      return ''
+      return 'text-2xl'
     case 'h4':
-      return ''
+      return 'text-xl'
     case 'h5':
-      return ''
+      return 'text-lg'
     case 'h6':
-      return ''
+      return 'text-base'
     default:
       throw new Error(`Heading ${heading} must be h1, h2, h3, h4, h5, or h6`)
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { getAllRecipes, getRecipe } from 'src/helpers'
 import { CATEGORIES } from 'src/constants'
-import { Default } from 'src/components/layouts'
+import { Recipe } from 'src/components/layouts'
 
 export default function RecipePage({ recipe }) {
   if (!recipe) return <p>Recipe not found</p>
@@ -19,9 +19,7 @@ export default function RecipePage({ recipe }) {
   } = recipe
 
   return (
-    <Default>
-      <h2>{title}</h2>
-
+    <Recipe title={title}>
       <h3>{category}</h3>
 
       <h4>{subcategory}</h4>
@@ -47,7 +45,7 @@ export default function RecipePage({ recipe }) {
             return <li key={`step-${index}`}>{step}</li>
           })}
       </ol>
-    </Default>
+    </Recipe>
   )
 }
 
