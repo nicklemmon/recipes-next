@@ -20,31 +20,33 @@ export default function RecipePage({ recipe }) {
 
   return (
     <Page title={title}>
-      <h3>{category}</h3>
+      <div className="grid grid-flow-row auto-rows-max md:auto-rows-min">
+        <aside className="bg-gray-200 p-3">
+          <p>{review} out of 5 stars</p>
 
-      <h4>{subcategory}</h4>
+          <p>{cookTime} minutes to prepare</p>
 
-      <p>{review} out of 5 stars</p>
+          <p>Serves {numberServed} people.</p>
 
-      <p>{cookTime} minutes to prepare</p>
+          <p>From {source}</p>
+        </aside>
 
-      <p>Serves {numberServed} people.</p>
+        <article>
+          <ul>
+            {ingredients &&
+              ingredients.map((ingredient, index) => {
+                return <li key={`ingredient-${index}`}>{ingredient}</li>
+              })}
+          </ul>
 
-      <p>From {source}</p>
-
-      <ul>
-        {ingredients &&
-          ingredients.map((ingredient, index) => {
-            return <li key={`ingredient-${index}`}>{ingredient}</li>
-          })}
-      </ul>
-
-      <ol>
-        {steps &&
-          steps.map((step, index) => {
-            return <li key={`step-${index}`}>{step}</li>
-          })}
-      </ol>
+          <ol>
+            {steps &&
+              steps.map((step, index) => {
+                return <li key={`step-${index}`}>{step}</li>
+              })}
+          </ol>
+        </article>
+      </div>
     </Page>
   )
 }
