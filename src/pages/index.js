@@ -17,6 +17,10 @@ export default function Home() {
             </div>
           )
         })}
+
+        <div role="listitem">
+          <PageLink href="/favorites">Favorites</PageLink>
+        </div>
       </div>
     </Default>
   )

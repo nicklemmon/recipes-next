@@ -25,7 +25,11 @@ export function getAllRecipes() {
 }
 
 export function titleToId(title) {
-  return title.toLowerCase().replace(/,/g, '').replace(/ /g, '-')
+  return title
+    .toLowerCase()
+    .replace(/,/g, '') // Remove commas
+    .replace(/'/g, '') // Remove apostrophes
+    .replace(/ /g, '-') // Replace spaces with -
 }
 
 export function fetcher(url) {
