@@ -14,7 +14,7 @@ export default function SubcategoryPage({ recipes }) {
           return (
             <div role="listitem" key={`favorite-${index}`}>
               <PageLink
-                href={`/${recipe.category}}/${recipe.subcategory}/${recipe.id}`}
+                href={`/${recipe.category}/${recipe.subcategory}/${recipe.id}`}
               >
                 {recipe.title}
               </PageLink>
@@ -35,11 +35,9 @@ export async function getStaticProps() {
       const currentCategory = CATEGORIES.find(
         category => category.name === recipe.category
       )
-      console.log('currentCategory', currentCategory)
       const currentSubcategory = currentCategory.subcategories.find(
         subcategory => subcategory.name === recipe.subcategory
       )
-      console.log('currentSubcategory', currentSubcategory)
 
       return {
         title: recipe.title,
