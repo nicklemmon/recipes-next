@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-gray-200 p-3 sticky bottom-0">
       <p className="text-right">
         All rights reserved&nbsp;
-        <PageLink href="https://nicklemmon.com">Nick Lemmon</PageLink>, &nbsp;
+        <PageLink href="https://nicklemmon.com">Nick Lemmon</PageLink>,
         {currentYear}
       </p>
     </footer>
