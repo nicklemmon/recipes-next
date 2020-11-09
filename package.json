@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf .next",
-    "dev": "npm run clean && next dev",
+    "start": "npm run clean && next dev",
     "build": "npm run clean && next build",
-    "start": "next start"
+    "serve": "next start"
   },
   "dependencies": {
     "classnames": "^2.2.6",
