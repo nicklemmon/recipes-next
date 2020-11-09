@@ -7,7 +7,9 @@ import { PageLink } from 'src/components/links'
 export default function Home() {
   return (
     <Default>
-      <Head>Nick &amp; Laurie&rsquo;s Recipe Collection</Head>
+      <Head>
+        <title>Nick &amp; Laurie&rsquo;s Recipe Collection</title>
+      </Head>
 
       <div role="list">
         {CATEGORIES.map((category, index) => {
