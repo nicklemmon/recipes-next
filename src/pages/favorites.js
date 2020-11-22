@@ -2,26 +2,27 @@ import React from 'react'
 import { CATEGORIES } from 'src/constants'
 import { titleToId, getAllRecipes } from 'src/helpers'
 import { Page } from 'src/components/layouts'
-import { PageLink } from 'src/components/links'
+import { CardLink } from 'src/components/links'
+import { GridList } from 'src/components'
 
 export default function SubcategoryPage({ recipes }) {
   if (!recipes) return <p>No favorite recipes found</p>
 
   return (
     <Page title="Favorites">
-      <div role="list">
+      <GridList>
         {recipes.map((recipe, index) => {
           return (
-            <div role="listitem" key={`favorite-${index}`}>
-              <PageLink
+            <GridList.Item key={`favorite-${index}`}>
+              <CardLink
                 href={`/${recipe.category}/${recipe.subcategory}/${recipe.id}`}
               >
                 {recipe.title}
-              </PageLink>
-            </div>
+              </CardLink>
+            </GridList.Item>
           )
         })}
-      </div>
+      </GridList>
     </Page>
   )
 }
