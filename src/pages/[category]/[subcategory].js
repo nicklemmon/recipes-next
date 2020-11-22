@@ -26,8 +26,9 @@ export default function SubcategoryPage({ category, subcategory, recipes }) {
 
             <thead>
               <Table.Row>
-                <Table.Cell as="th">Recipe</Table.Cell>
-                <Table.Cell as="th">Review</Table.Cell>
+                <Table.HeadCell>Recipe</Table.HeadCell>
+
+                <Table.HeadCell>Review</Table.HeadCell>
               </Table.Row>
             </thead>
 

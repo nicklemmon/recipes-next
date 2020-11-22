@@ -4,7 +4,7 @@ import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { titleToId, getAllRecipes } from 'src/helpers'
 import { Page } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
-import { Table } from 'src/components'
+import { Table, Tag } from 'src/components'
 
 export default function SubcategoryPage({ recipes }) {
   if (!recipes) return <p>No favorite recipes found</p>
@@ -20,8 +20,13 @@ export default function SubcategoryPage({ recipes }) {
 
           <thead>
             <Table.Row>
-              <Table.Cell as="th">Recipe</Table.Cell>
-              <Table.Cell as="th">Review</Table.Cell>
+              <Table.HeadCell as="th">Recipe</Table.HeadCell>
+
+              <Table.HeadCell as="th">Category</Table.HeadCell>
+
+              <Table.HeadCell as="th">Subcategory</Table.HeadCell>
+
+              <Table.HeadCell as="th">Review</Table.HeadCell>
             </Table.Row>
           </thead>
 
@@ -31,11 +36,19 @@ export default function SubcategoryPage({ recipes }) {
                 <Table.Row key={`recipe-${index}`}>
                   <Table.Cell>
                     <PageLink
-                      href={`/${recipe.category}/${recipe.subcategory}/${recipe.id}`}
+                      href={`/${recipe.category.id}/${recipe.subcategory.id}/${recipe.id}`}
                       className="text-blue-600"
                     >
                       {recipe.title}
                     </PageLink>
+                  </Table.Cell>
+
+                  <Table.Cell>
+                    <Tag>{recipe.category.name}</Tag>
+                  </Table.Cell>
+
+                  <Table.Cell>
+                    <Tag>{recipe.subcategory.name}</Tag>
                   </Table.Cell>
 
                   <Table.Cell>5 out of 5</Table.Cell>
@@ -64,8 +77,8 @@ export async function getStaticProps() {
       return {
         title: recipe.title,
         id: titleToId(recipe.title),
-        category: currentCategory.id,
-        subcategory: currentSubcategory.id,
+        category: currentCategory,
+        subcategory: currentSubcategory,
       }
     })
 

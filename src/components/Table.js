@@ -12,14 +12,17 @@ function Row({ children }) {
   return <tr className="text-left border">{children}</tr>
 }
 
-function Cell({ as = 'td', children }) {
-  const Component = as
+function HeadCell({ children }) {
+  return <th className="p-5 text-gray-700">{children}</th>
+}
 
-  return <Component className="p-6 text-gray-600">{children}</Component>
+function Cell({ children }) {
+  return <td className="p-5 text-gray-500">{children}</td>
 }
 
 Table.Caption = Caption
 Table.Row = Row
+Table.HeadCell = HeadCell
 Table.Cell = Cell
 
 export default Table
