@@ -1,25 +1,35 @@
 import React from 'react'
-import { CATEGORIES } from 'src/constants'
+import Head from 'next/head'
+import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { Page } from 'src/components/layouts'
-import { PageLink } from 'src/components/links'
+import { CardLink } from 'src/components/links'
+import { GridList } from 'src/components'
 
 export default function CategoryPage({ category }) {
   if (!category) return <p>Category not found.</p>
 
   return (
-    <Page title={category.name}>
-      <div role="list">
-        {category.subcategories.map((subcategory, index) => {
-          return (
-            <div role="listitem" key={`subcategory-${index}`}>
-              <PageLink href={`/${category.id}/${subcategory.id}`}>
-                {subcategory.name}
-              </PageLink>
-            </div>
-          )
-        })}
-      </div>
-    </Page>
+    <>
+      <Head>
+        <title>
+          {category.name} | {SITE_TITLE}
+        </title>
+      </Head>
+
+      <Page title={category.name}>
+        <GridList>
+          {category.subcategories.map((subcategory, index) => {
+            return (
+              <GridList.Item key={`subcategory-${index}`}>
+                <CardLink href={`/${category.id}/${subcategory.id}`}>
+                  {subcategory.name}
+                </CardLink>
+              </GridList.Item>
+            )
+          })}
+        </GridList>
+      </Page>
+    </>
   )
 }
 

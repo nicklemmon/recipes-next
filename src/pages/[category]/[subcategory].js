@@ -1,34 +1,44 @@
 import React from 'react'
-import { CATEGORIES } from 'src/constants'
+import Head from 'next/head'
+import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { titleToId, getAllRecipes } from 'src/helpers'
 import { Page } from 'src/components/layouts'
-import { PageLink } from 'src/components/links'
+import { CardLink } from 'src/components/links'
+import { GridList } from 'src/components'
 
 export default function SubcategoryPage({ category, subcategory, recipes }) {
   if (!subcategory || !category) return <p>Subcategory not found.</p>
 
   return (
-    <Page title={subcategory.name}>
-      {recipes.length === 0 && <p>No recipes here yet!</p>}
+    <>
+      <Head>
+        <title>
+          {subcategory.name} | {category.name} | {SITE_TITLE}
+        </title>
+      </Head>
 
-      {recipes.length > 0 ? (
-        <div role="list">
-          {recipes.map((recipe, index) => {
-            return (
-              <div role="listitem" key={`recipe-${index}`}>
-                <PageLink
-                  href={`/${category.id}/${subcategory.id}/${titleToId(
-                    recipe.title
-                  )}`}
-                >
-                  {recipe.title}
-                </PageLink>
-              </div>
-            )
-          })}
-        </div>
-      ) : null}
-    </Page>
+      <Page title={subcategory.name}>
+        {recipes.length === 0 && <p>No recipes here yet!</p>}
+
+        {recipes.length > 0 ? (
+          <GridList>
+            {recipes.map((recipe, index) => {
+              return (
+                <GridList.Item key={`recipe-${index}`}>
+                  <CardLink
+                    href={`/${category.id}/${subcategory.id}/${titleToId(
+                      recipe.title
+                    )}`}
+                  >
+                    {recipe.title}
+                  </CardLink>
+                </GridList.Item>
+              )
+            })}
+          </GridList>
+        ) : null}
+      </Page>
+    </>
   )
 }
 

@@ -8,7 +8,7 @@ export default function PageLink(props) {
   return (
     <Link href={href} passHref onKeyDown={onKeyDown}>
       <a
-        className={classNames('text-blue-600 underline', className)}
+        className={classNames('underline', className)}
         data-id={props['data-id']}
         onClick={onClick}
         rel={rel}

@@ -1,29 +1,34 @@
 import React from 'react'
 import Head from 'next/head'
-import { CATEGORIES } from 'src/constants'
+import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { Default } from 'src/components/layouts'
-import { PageLink } from 'src/components/links'
+import { CardLink } from 'src/components/links'
+import { GridList } from 'src/components'
 
 export default function Home() {
+  const renderedCategories = [
+    ...CATEGORIES,
+    {
+      id: 'favorites',
+      name: 'Favorites',
+    },
+  ]
+
   return (
     <Default>
       <Head>
-        <title>Nick &amp; Laurie&rsquo;s Recipe Collection</title>
+        <title>{SITE_TITLE}</title>
       </Head>
 
-      <div role="list">
-        {CATEGORIES.map((category, index) => {
+      <GridList>
+        {renderedCategories.map((category, index) => {
           return (
-            <div role="listitem" key={`category-${index}`}>
-              <PageLink href={`/${category.id}`}>{category.name}</PageLink>
-            </div>
+            <GridList.Item key={`category-${index}`}>
+              <CardLink href={`/${category.id}`}>{category.name}</CardLink>
+            </GridList.Item>
           )
         })}
-
-        <div role="listitem">
-          <PageLink href="/favorites">Favorites</PageLink>
-        </div>
-      </div>
+      </GridList>
     </Default>
   )
 }

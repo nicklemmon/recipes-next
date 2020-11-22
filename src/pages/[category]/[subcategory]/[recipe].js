@@ -1,4 +1,6 @@
 import React from 'react'
+import Head from 'next/head'
+import { SITE_TITLE } from 'src/constants'
 import { getAllRecipes, getRecipe } from 'src/helpers'
 import { CATEGORIES } from 'src/constants'
 import { Page } from 'src/components/layouts'
@@ -19,35 +21,53 @@ export default function RecipePage({ recipe }) {
   } = recipe
 
   return (
-    <Page title={title}>
-      <div className="grid grid-flow-row auto-rows-max md:auto-rows-min">
-        <aside className="bg-gray-200 p-3">
-          <p>{review} out of 5 stars</p>
+    <>
+      <Head>
+        <title>
+          {title} | {subcategory} | {category} | {SITE_TITLE}
+        </title>
+      </Head>
 
-          <p>{cookTime} minutes to prepare</p>
+      <Page title={title}>
+        <div className="grid grid-cols-3 gap-4">
+          <article className="col-span-2 text-gray-600">
+            <ul className="list-inside list-disc mb-8">
+              {ingredients &&
+                ingredients.map((ingredient, index) => {
+                  return (
+                    <li className="mb-1" key={`ingredient-${index}`}>
+                      {ingredient}
+                    </li>
+                  )
+                })}
+            </ul>
 
-          <p>Serves {numberServed} people.</p>
+            <ol className="list-inside list-decimal">
+              {steps &&
+                steps.map((step, index) => {
+                  return (
+                    <li className="mb-1" key={`step-${index}`}>
+                      {step}
+                    </li>
+                  )
+                })}
+            </ol>
+          </article>
 
-          <p>From {source}</p>
-        </aside>
+          <div className="col-span-1">
+            <aside className="bg-gray-100 text-gray-700 p-4 rounded-lg">
+              <p>{review} out of 5 stars</p>
 
-        <article>
-          <ul>
-            {ingredients &&
-              ingredients.map((ingredient, index) => {
-                return <li key={`ingredient-${index}`}>{ingredient}</li>
-              })}
-          </ul>
+              <p>{cookTime} minutes to prepare</p>
 
-          <ol>
-            {steps &&
-              steps.map((step, index) => {
-                return <li key={`step-${index}`}>{step}</li>
-              })}
-          </ol>
-        </article>
-      </div>
-    </Page>
+              <p>Serves {numberServed} people.</p>
+
+              <p>From {source}</p>
+            </aside>
+          </div>
+        </div>
+      </Page>
+    </>
   )
 }
 

@@ -5,11 +5,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-200 p-3 sticky bottom-0">
+    <footer className="text-gray-800 p-3 sticky bottom-0">
       <p className="text-right">
         All rights reserved&nbsp;
         <PageLink href="https://nicklemmon.com">Nick Lemmon</PageLink>,
-        {currentYear}
+        <span>&nbsp;{currentYear}</span>
       </p>
     </footer>
   )

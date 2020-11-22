@@ -1,23 +1,17 @@
 import React from 'react'
-import Head from 'next/head'
-import { SITE_TITLE } from 'src/constants'
 import { Default } from 'src/components/layouts'
 import { Heading } from 'src/components/text'
 
 export default function Page({ title, children }) {
   return (
-    <>
-      <Head>
-        <title>
-          {title} | {SITE_TITLE}
-        </title>
-      </Head>
+    <Default>
+      <div className="mb-8">
+        <Heading as="h1" className="text-gray-700">
+          {title}
+        </Heading>
+      </div>
 
-      <Default>
-        <Heading as="h1">{title}</Heading>
-
-        {children}
-      </Default>
-    </>
+      {children}
+    </Default>
   )
 }
