@@ -17,7 +17,15 @@ export default function SubcategoryPage({ category, subcategory, recipes }) {
         </title>
       </Head>
 
-      <Page title={subcategory.name}>
+      <Page>
+        <Page.Header>
+          <Page.Title>{subcategory.name}</Page.Title>
+
+          <Page.Breadcrumbs href={`/${category.id}`}>
+            Back to {category.name}
+          </Page.Breadcrumbs>
+        </Page.Header>
+
         {recipes.length === 0 && <p>No recipes here yet!</p>}
 
         {recipes.length > 0 ? (

@@ -16,7 +16,13 @@ export default function CategoryPage({ category }) {
         </title>
       </Head>
 
-      <Page title={category.name}>
+      <Page>
+        <Page.Header>
+          <Page.Title>{category.name}</Page.Title>
+
+          <Page.Breadcrumbs href="/">Back to Landing</Page.Breadcrumbs>
+        </Page.Header>
+
         <GridList>
           {category.subcategories.map((subcategory, index) => {
             return (

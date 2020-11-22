@@ -5,13 +5,13 @@ import { getAllRecipes, getRecipe } from 'src/helpers'
 import { CATEGORIES } from 'src/constants'
 import { Page } from 'src/components/layouts'
 
-export default function RecipePage({ recipe }) {
+export default function RecipePage({ category, subcategory, recipe }) {
   if (!recipe) return <p>Recipe not found</p>
 
   const {
     title,
-    category,
-    subcategory,
+    category: recipeCategory,
+    subcategory: recipeSubcategory,
     review,
     cookTime,
     numberServed,
@@ -24,11 +24,19 @@ export default function RecipePage({ recipe }) {
     <>
       <Head>
         <title>
-          {title} | {subcategory} | {category} | {SITE_TITLE}
+          {title} | {recipeSubcategory} | {recipeCategory} | {SITE_TITLE}
         </title>
       </Head>
 
-      <Page title={title}>
+      <Page>
+        <Page.Header>
+          <Page.Title>{title}</Page.Title>
+
+          <Page.Breadcrumbs href={`/${category}/${subcategory}`}>
+            Back to {subcategory}
+          </Page.Breadcrumbs>
+        </Page.Header>
+
         <div className="grid grid-cols-3 gap-4">
           <article className="col-span-2 text-gray-600">
             <ul className="list-inside list-disc mb-8">
@@ -93,11 +101,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  console.log('params', params)
   const recipe = getRecipe(`${params.recipe}.yml`)
 
   return {
     props: {
       recipe,
+      category: params.category,
+      subcategory: params.subcategory,
     },
   }
 }
