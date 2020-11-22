@@ -1,10 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
-import { titleToId, getAllRecipes } from 'src/helpers'
+import { getAllRecipes, titleToId } from 'src/helpers'
 import { Page } from 'src/components/layouts'
-import { CardLink } from 'src/components/links'
-import { GridList } from 'src/components'
+import { PageLink } from 'src/components/links'
+import { Table } from 'src/components'
 
 export default function SubcategoryPage({ category, subcategory, recipes }) {
   if (!subcategory || !category) return <p>Subcategory not found.</p>
@@ -21,21 +21,37 @@ export default function SubcategoryPage({ category, subcategory, recipes }) {
         {recipes.length === 0 && <p>No recipes here yet!</p>}
 
         {recipes.length > 0 ? (
-          <GridList>
-            {recipes.map((recipe, index) => {
-              return (
-                <GridList.Item key={`recipe-${index}`}>
-                  <CardLink
-                    href={`/${category.id}/${subcategory.id}/${titleToId(
-                      recipe.title
-                    )}`}
-                  >
-                    {recipe.title}
-                  </CardLink>
-                </GridList.Item>
-              )
-            })}
-          </GridList>
+          <Table>
+            <Table.Caption>{subcategory.name} Recipes</Table.Caption>
+
+            <thead>
+              <Table.Row>
+                <Table.Cell as="th">Recipe</Table.Cell>
+                <Table.Cell as="th">Review</Table.Cell>
+              </Table.Row>
+            </thead>
+
+            <tbody>
+              {recipes.map((recipe, index) => {
+                return (
+                  <Table.Row key={`recipe-${index}`}>
+                    <Table.Cell>
+                      <PageLink
+                        href={`/${category.id}/${subcategory.id}/${titleToId(
+                          recipe.title
+                        )}`}
+                        className="text-blue-600"
+                      >
+                        {recipe.title}
+                      </PageLink>
+                    </Table.Cell>
+
+                    <Table.Cell>{recipe.review} out of 5</Table.Cell>
+                  </Table.Row>
+                )
+              })}
+            </tbody>
+          </Table>
         ) : null}
       </Page>
     </>
