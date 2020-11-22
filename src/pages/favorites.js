@@ -31,7 +31,6 @@ export async function getStaticProps() {
   const recipes = getAllRecipes()
     .filter(recipe => recipe.review === 5)
     .map(recipe => {
-      console.log('recipe', recipe)
       const currentCategory = CATEGORIES.find(
         category => category.name === recipe.category
       )
