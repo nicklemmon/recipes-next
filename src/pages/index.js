@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { Default } from 'src/components/layouts'
 import { CardLink } from 'src/components/links'
-import { GridList } from 'src/components'
+import { Icon, GridList } from 'src/components'
 
 export default function Home() {
   const renderedCategories = [
@@ -11,6 +11,7 @@ export default function Home() {
     {
       id: 'favorites',
       name: 'Favorites',
+      icon: '⭐',
     },
   ]
 
@@ -24,7 +25,11 @@ export default function Home() {
         {renderedCategories.map((category, index) => {
           return (
             <GridList.Item key={`category-${index}`}>
-              <CardLink href={`/${category.id}`}>{category.name}</CardLink>
+              <CardLink href={`/${category.id}`}>
+                <Icon as={category.icon} size="1.5rem" />
+
+                {category.name}
+              </CardLink>
             </GridList.Item>
           )
         })}

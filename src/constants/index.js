@@ -4,6 +4,7 @@ export const CATEGORIES = [
   {
     name: 'Main Dish',
     id: 'main-dish',
+    icon: '🍗',
     subcategories: [
       {
         name: 'Seafood',
@@ -38,6 +39,7 @@ export const CATEGORIES = [
   {
     name: 'Side Dish',
     id: 'side-dish',
+    icon: '🍚',
     subcategories: [
       {
         name: 'Vegetables',
@@ -52,6 +54,7 @@ export const CATEGORIES = [
   {
     name: 'Appetizers',
     id: 'appetizers',
+    icon: '🧀',
     subcategories: [
       {
         name: 'Hot',
@@ -66,6 +69,7 @@ export const CATEGORIES = [
   {
     name: 'Drink',
     id: 'drink',
+    icon: '🍸',
     subcategories: [
       {
         name: 'Alcoholic',
@@ -84,6 +88,7 @@ export const CATEGORIES = [
   {
     name: 'Dessert',
     id: 'dessert',
+    icon: '🍰',
     subcategories: [
       {
         name: 'Chocolate',

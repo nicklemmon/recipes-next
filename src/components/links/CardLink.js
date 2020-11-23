@@ -12,7 +12,7 @@ export default function CardLink({ as = PageLink, href, children, className }) {
     <Component
       href={href}
       className={classNames(
-        `flex items-center justify-center w-full h-full text-center text-gray-600 no-underline p-16 bg-white shadow-lg rounded-lg outline-none ${hoverStyles} ${focusStyles}`,
+        `flex flex-col items-center justify-center w-full h-full text-center text-gray-600 no-underline p-16 bg-white shadow-lg rounded-lg outline-none ${hoverStyles} ${focusStyles}`,
         className
       )}
     >
