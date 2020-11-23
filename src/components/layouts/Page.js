@@ -13,19 +13,19 @@ function Header({ children }) {
 
 function Title({ children }) {
   return (
-    <div className="mb-3">
-      <Heading as="h1" className="text-gray-700">
-        {children}
-      </Heading>
-    </div>
+    <Heading as="h1" className="text-indigo-600">
+      {children}
+    </Heading>
   )
 }
 
 function Breadcrumbs({ children, href }) {
   return (
-    <PageLink className="text-blue-600" href={href}>
-      {children}
-    </PageLink>
+    <div className="mt-3">
+      <PageLink className="text-blue-600" href={href}>
+        {children}
+      </PageLink>
+    </div>
   )
 }
 
