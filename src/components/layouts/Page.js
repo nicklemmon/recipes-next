@@ -13,7 +13,7 @@ function Header({ children }) {
 
 function Title({ children }) {
   return (
-    <Heading as="h1" className="text-gray-700">
+    <Heading as="h1" className="text-indigo-600">
       {children}
     </Heading>
   )
