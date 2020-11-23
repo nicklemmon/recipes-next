@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { Page } from 'src/components/layouts'
 import { CardLink } from 'src/components/links'
-import { GridList } from 'src/components'
+import { Icon, GridList } from 'src/components'
 
 export default function CategoryPage({ category }) {
   if (!category) return <p>Category not found.</p>
@@ -28,6 +28,8 @@ export default function CategoryPage({ category }) {
             return (
               <GridList.Item key={`subcategory-${index}`}>
                 <CardLink href={`/${category.id}/${subcategory.id}`}>
+                  <Icon as={subcategory.icon} size="1.5rem" />
+
                   {subcategory.name}
                 </CardLink>
               </GridList.Item>

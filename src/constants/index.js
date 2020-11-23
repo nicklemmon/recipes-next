@@ -9,30 +9,32 @@ export const CATEGORIES = [
       {
         name: 'Seafood',
         id: 'seafood',
+        icon: '🍤',
       },
       {
         name: 'Poultry',
         id: 'poultry',
+        icon: '🍗',
       },
       {
         name: 'Vegetarian',
         id: 'vegetarian',
+        icon: '🥦',
       },
       {
         name: 'Beef',
         id: 'beef',
+        icon: '🍔',
       },
       {
         name: 'Pork',
         id: 'pork',
-      },
-      {
-        name: 'Seafood',
-        id: 'seafood',
+        icon: '🥓',
       },
       {
         name: 'Breakfast',
         id: 'breakfast',
+        icon: '🥞',
       },
     ],
   },
@@ -44,10 +46,12 @@ export const CATEGORIES = [
       {
         name: 'Vegetables',
         id: 'vegetables',
+        icon: '🥦',
       },
       {
         name: 'Starches',
         id: 'starches',
+        icon: '🍚',
       },
     ],
   },
@@ -59,10 +63,12 @@ export const CATEGORIES = [
       {
         name: 'Hot',
         id: 'hot',
+        icon: '🍲',
       },
       {
         name: 'Cold',
         id: 'cold',
+        icon: '🧀',
       },
     ],
   },
@@ -74,14 +80,17 @@ export const CATEGORIES = [
       {
         name: 'Alcoholic',
         id: 'alcoholic',
+        icon: '🍸',
       },
       {
         name: 'Coffee',
         id: 'coffee',
+        icon: '☕',
       },
       {
         name: 'Smoothie',
         id: 'smoothie',
+        icon: '🥛',
       },
     ],
   },
@@ -93,18 +102,22 @@ export const CATEGORIES = [
       {
         name: 'Chocolate',
         id: 'chocolate',
+        icon: '🍫',
       },
       {
         name: 'Cake',
         id: 'cake',
+        icon: '🍰',
       },
       {
         name: 'Pie',
         id: 'pie',
+        icon: '🥧',
       },
       {
         name: 'Cookies',
         id: 'cookies',
+        icon: '🍪',
       },
     ],
   },
