@@ -37,8 +37,8 @@ export default function RecipePage({ category, subcategory, recipe }) {
           </Page.Breadcrumbs>
         </Page.Header>
 
-        <div className="grid grid-cols-3 gap-4">
-          <article className="col-span-2 bg-white p-6 text-gray-500">
+        <div className="grid md:grid-cols-3 gap-4">
+          <article className="md:col-span-2 bg-white p-6 text-gray-500">
             <h2 className="text-xl font-bold mb-4 text-gray-600">
               Ingredients
             </h2>
@@ -68,7 +68,7 @@ export default function RecipePage({ category, subcategory, recipe }) {
             </ol>
           </article>
 
-          <div className="col-span-1">
+          <div className="md:col-span-1">
             <aside className="bg-indigo-100 text-indigo-700 p-4 rounded-lg">
               <div className="mb-3">
                 <h3 className="text-base font-semibold">Review</h3>
