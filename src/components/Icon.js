@@ -8,7 +8,7 @@ export default function Icon({ as, label, size }) {
   }
 
   return (
-    <span role={role} ariaLabel={ariaLabel} style={styles}>
+    <span role={role} aria-label={ariaLabel} style={styles}>
       {as}
     </span>
   )
