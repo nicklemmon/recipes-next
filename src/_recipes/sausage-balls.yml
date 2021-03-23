@@ -5,6 +5,9 @@ review: 5
 cookTime: 20
 numberServed: 6
 source: East Meck "Cooking Down East" cookbook
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 cups Bisquick
   - 2 cups sharp cheddar cheese

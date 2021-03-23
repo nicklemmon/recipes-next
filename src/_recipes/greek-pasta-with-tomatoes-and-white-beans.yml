@@ -5,6 +5,9 @@ review: 5
 cookTime: 40 minutes
 numberServed: 6
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 cans (14.5 ounces) italian-style diced tomatoes
   - 10 ounces fresh spinach (washed and chopped)

@@ -1,10 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
-import { getAllRecipes, titleToId } from 'src/helpers'
+import { getAllRecipes, titleToId, getFamilyMember } from 'src/helpers'
 import { Page } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
-import { Table } from 'src/components'
+import { Table, Tag } from 'src/components'
 
 export default function SubcategoryPage({ category, subcategory, recipes }) {
   if (!subcategory || !category) return <p>Subcategory not found.</p>
@@ -36,6 +36,8 @@ export default function SubcategoryPage({ category, subcategory, recipes }) {
               <Table.Row>
                 <Table.HeadCell>Recipe</Table.HeadCell>
 
+                <Table.HeadCell>Liked By</Table.HeadCell>
+
                 <Table.HeadCell>Review</Table.HeadCell>
               </Table.Row>
             </thead>
@@ -53,6 +55,20 @@ export default function SubcategoryPage({ category, subcategory, recipes }) {
                       >
                         {recipe.title}
                       </PageLink>
+                    </Table.Cell>
+
+                    <Table.Cell>
+                      {recipe.likedBy.map((familyMember, index) => {
+                        return (
+                          <Tag
+                            key={`family-member-${familyMember.id}-${index}`}
+                            color={familyMember.color}
+                            className={index === 0 ? 'ml-0' : 'ml-3'}
+                          >
+                            {familyMember.name}
+                          </Tag>
+                        )
+                      })}
                     </Table.Cell>
 
                     <Table.Cell>{recipe.review} out of 5</Table.Cell>
@@ -92,11 +108,20 @@ export async function getStaticProps({ params }) {
     subcategory => subcategory.id === params.subcategory
   )
   // Filter recipes based on the recipe category and subcategory referencing the core config
-  const recipes = getAllRecipes().filter(
-    recipe =>
-      recipe.category === currentCategory.name &&
-      recipe.subcategory === currentSubcategory.name
-  )
+  const recipes = getAllRecipes()
+    .filter(
+      recipe =>
+        recipe.category === currentCategory.name &&
+        recipe.subcategory === currentSubcategory.name
+    )
+    .map(recipe => {
+      const likedBy = recipe.likedBy.map(id => getFamilyMember(id))
+
+      return {
+        ...recipe,
+        likedBy,
+      }
+    })
 
   return {
     props: {

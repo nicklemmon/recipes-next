@@ -122,3 +122,21 @@ export const CATEGORIES = [
     ],
   },
 ]
+
+export const FAMILY_MEMBERS = [
+  {
+    id: 'laurie',
+    name: 'Laurie',
+    color: 'indigo',
+  },
+  {
+    id: 'nick',
+    name: 'Nick',
+    color: 'blue',
+  },
+  {
+    id: 'eva',
+    name: 'Eva',
+    color: 'pink',
+  },
+]

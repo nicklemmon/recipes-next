@@ -5,6 +5,9 @@ review: 5
 cookTime: 30 minutes
 numberServed: 3
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 tbsp extra-virgin olive oil
   - 1 lb extra-lean ground turkey

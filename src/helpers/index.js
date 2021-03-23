@@ -1,6 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import yaml from 'js-yaml'
+import { FAMILY_MEMBERS } from 'src/constants'
 
 const recipesDirectory = join(process.cwd(), 'src/_recipes')
 
@@ -15,6 +16,12 @@ export function getRecipe(id) {
   const slug = id.replace('.yml', '')
 
   return { ...data, slug }
+}
+
+export function getFamilyMember(id) {
+  return FAMILY_MEMBERS.find(familyMember => {
+    return familyMember.id === id
+  })
 }
 
 export function getAllRecipes() {

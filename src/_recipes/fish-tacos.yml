@@ -5,9 +5,12 @@ review: 5
 cookTime: 55
 numberServed: 6
 source: https://natashaskitchen.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 24 small white corn tortillas
-  - 1 1/2 lb tilapia
+  - 1 1/2 lb Mahi Mahi
   - 1/2 tsp ground cumin
   - 1/2 tsp cayenne pepper
   - 1 tsp salt

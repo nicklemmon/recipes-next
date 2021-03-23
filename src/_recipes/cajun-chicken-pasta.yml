@@ -5,6 +5,9 @@ review: 4
 cookTime: 40
 numberServed: 4
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 8 ounces linguine pasta
   - 4 skinless/boneless chicken breasts

@@ -5,6 +5,9 @@ review: 4
 cookTime: 30
 numberServed: 2
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 (4 ounce) fillets mahi mahi
   - 2 teaspoons olive oil

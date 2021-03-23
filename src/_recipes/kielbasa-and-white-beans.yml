@@ -5,6 +5,10 @@ review: 5
 cookTime: 20
 numberServed: 4
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 1 pound kielbasa or polish sauces cut into 1/2 inch pieces
   - 1 small onion (chopped)

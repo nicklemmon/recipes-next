@@ -5,6 +5,9 @@ review: 5
 cookTime: 60
 numberServed: 8
 source: Woman's Day Magazine
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 3 medium onions, chopped (for 1 1/4 cups)
   - 1 cup chopped celery

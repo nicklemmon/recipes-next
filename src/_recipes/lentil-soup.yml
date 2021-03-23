@@ -5,6 +5,9 @@ review: 4
 cookTime: 1 hour
 numberServed: 6
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 tbsp olive oil
   - 1 onion (chopped)

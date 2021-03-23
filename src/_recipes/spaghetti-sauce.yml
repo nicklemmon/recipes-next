@@ -5,6 +5,10 @@ review: 5
 cookTime: 1 hour
 numberServed: 6
 source: http://food.com
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 1 pound ground beef
   - 3/4 of a medium white onion, chopped

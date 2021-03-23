@@ -5,6 +5,9 @@ review: 3
 cookTime: 30
 numberServed: 3
 source: http://geniuskitchen.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1⁄2 cup chopped onion
   - 2 tablespoons olive oil

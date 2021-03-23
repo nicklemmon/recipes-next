@@ -5,6 +5,9 @@ review: 5
 cookTime: 60
 numberServed: 8
 source: Libby's Canned Pumpkin
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1 (9 inch) unbaked deep dish pie crust
   - ¾ cup white sugar

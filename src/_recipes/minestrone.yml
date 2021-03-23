@@ -5,6 +5,10 @@ review: 4
 cookTime: 35 minutes
 numberServed: 6
 source: http://foodnetwork.com
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 2 tablespoons extra-virgin olive oil
   - 1 large onion

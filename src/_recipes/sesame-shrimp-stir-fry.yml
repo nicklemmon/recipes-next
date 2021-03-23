@@ -5,6 +5,9 @@ review: 5
 cookTime: 25
 numberServed: 4
 source: https://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 cups water
   - 1 cup uncooked white rie

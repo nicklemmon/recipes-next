@@ -5,6 +5,9 @@ review: 5
 cookTime: 20
 numberServed: 8
 source: http://theyummylife.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 4 apples (peeled then cored and cut in to 1/2 inch pieces)
   - 3 cups fat-free milk

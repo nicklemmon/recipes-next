@@ -5,6 +5,9 @@ review: 4
 cookTime: 8 hours
 numberServed: 8
 source: http://pinchofyum
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 cups butternut squash (peeled and cubed)
   - 2 cups carrots (peeled and sliced)
