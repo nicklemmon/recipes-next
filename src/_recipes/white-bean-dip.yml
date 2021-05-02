@@ -5,6 +5,10 @@ review: 5
 cookTime: 10
 numberServed: 6
 source: Nana Lemmon
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 1 can white beans
   - 2-3 tablespoons lemon juice

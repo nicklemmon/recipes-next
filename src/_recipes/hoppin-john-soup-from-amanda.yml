@@ -5,6 +5,9 @@ review: 5
 cookTime: 30 Minutes
 numberServed: 11
 source: http://myrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 16 oz package dried black-eyed peas (rinsed and sorted)
   - 2 pounds smoked turkey wings

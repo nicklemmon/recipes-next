@@ -5,6 +5,10 @@ review: 5
 cookTime: 60
 numberServed: 8
 source: Birdseye Frozen Coconut
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 1 cup sugar
   - 2 tbsp. all-purpose flour

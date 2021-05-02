@@ -5,6 +5,10 @@ review: 5
 cookTime: 20 minutes
 numberServed: 6
 source: http://pressurecookingtoday.com
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 2 tablespoon butter
   - 2 cups steel cut oats

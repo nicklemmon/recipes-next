@@ -5,6 +5,10 @@ review: 5
 cookTime: 30
 numberServed: 8
 source: Rachel Rose
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 1 cup (2 sticks) of butter
   - 2 cups sugar

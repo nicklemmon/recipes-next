@@ -5,6 +5,9 @@ review: 3
 cookTime: .25 hours
 numberServed: 6
 source: http://tasteofhome.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1-1/2 cups water
   - 1-1/2 cups uncooked instant brown rice

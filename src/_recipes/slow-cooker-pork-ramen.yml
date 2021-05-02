@@ -5,6 +5,9 @@ review: 5
 cookTime: 45 minutes
 numberServed: 6
 source: https://chowhound.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 3 pounds boneless pork shoulder (cut into 3 equal pieces)
   - Kosher salt

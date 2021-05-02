@@ -5,6 +5,10 @@ review: 4
 cookTime: 1 hour
 numberServed: 4
 source: Aunt B
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - fatback
   - 2 cans of green beans

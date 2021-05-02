@@ -5,6 +5,9 @@ review: 4
 cookTime: 45
 numberServed: 1
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1 tablespoon butter
   - 1/2 cup chopped green onions

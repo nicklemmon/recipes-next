@@ -5,6 +5,9 @@ review: 5
 cookTime: 45 minutes
 numberServed: 8
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1.5 pounds boneless and skinless chicken breasts
   - 14 oz can of tomatoes (drained and diced)

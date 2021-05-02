@@ -5,6 +5,9 @@ review: 4
 cookTime: 8 hours
 numberServed: 8
 source: http://countryliving.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1 1/4 lb. skinless (bone-in chicken thighs)
   - 1 small onion (chopped)

@@ -5,6 +5,9 @@ review: 5
 cookTime: 40
 numberServed: 6
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 15 oz can tomato sauce
   - 1/4 cup water

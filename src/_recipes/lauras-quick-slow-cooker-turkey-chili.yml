@@ -5,6 +5,9 @@ review: 3
 cookTime: 4 hours
 numberServed: 8
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1 tablespoon vegetable oil
   - 1 pound ground turkey

@@ -5,6 +5,9 @@ review: 5
 cookTime: 90
 numberServed: 6
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 4 boneless chicken breast halves
   - 1/4 cup butter

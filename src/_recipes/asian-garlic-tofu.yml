@@ -5,6 +5,8 @@ review: 4
 cookTime: 60
 numberServed: 4
 source: https://spicysouthernkitchen.com
+likedBy:
+  - nick
 ingredients:
   - 1 package super firm tofu
   - 1/4 cup Hoisin sauce

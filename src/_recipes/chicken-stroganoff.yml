@@ -5,6 +5,9 @@ review: 5
 cookTime: 15
 numberServed: 4
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 4 boneless chicken breast halves - cubed
   - 1/8 cup margarine

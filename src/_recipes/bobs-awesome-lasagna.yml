@@ -5,6 +5,10 @@ review: 5
 cookTime: 1.5 hours
 numberServed: 8
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 8 ounces lasagna noodles
   - 1 pound ground beef

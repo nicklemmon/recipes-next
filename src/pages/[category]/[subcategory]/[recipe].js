@@ -123,7 +123,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log('params', params)
   const recipe = getRecipe(`${params.recipe}.yml`)
 
   return {

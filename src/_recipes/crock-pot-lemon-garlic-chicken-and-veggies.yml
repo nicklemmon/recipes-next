@@ -5,6 +5,9 @@ review: 5
 cookTime: 8 hours
 numberServed: 6
 source: http://neighborfoodblog.com
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 2 lbs. red potatoes (quartered)
   - 1 sweet yellow onion (quartered)

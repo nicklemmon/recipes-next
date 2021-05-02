@@ -5,6 +5,9 @@ review: 5
 cookTime: 1.5 hours
 numberServed: 8
 source: Aunt B
+likedBy:
+  - nick
+  - laurie
 ingredients:
   - 1 pound of pasta
   - 1 can of Carnation evaporated milk

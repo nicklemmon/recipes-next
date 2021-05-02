@@ -5,6 +5,10 @@ review: 4
 cookTime: 15
 numberServed: 6
 source: http://allrecipes.com
+likedBy:
+  - nick
+  - laurie
+  - eva
 ingredients:
   - 1 1/2 cups all-purpose flour
   - 3 1/2 teaspoons baking powder
