@@ -115,7 +115,9 @@ export async function getStaticProps({ params }) {
         recipe.subcategory === currentSubcategory.name
     )
     .map(recipe => {
-      const likedBy = recipe.likedBy.map(id => getFamilyMember(id))
+      const likedBy = recipe.likedBy
+        ? recipe.likedBy.map(id => getFamilyMember(id))
+        : []
 
       return {
         ...recipe,
