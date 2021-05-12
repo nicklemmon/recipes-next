@@ -79,13 +79,13 @@ export default function RecipePage({ category, subcategory, recipe }) {
               <div className="mb-3">
                 <h3 className="text-base font-semibold">Cook Time</h3>
 
-                <p>{cookTime} minutes to prepare</p>
+                <p>{cookTime}</p>
               </div>
 
               <div className="mb-3">
                 <h3 className="text-base font-semibold">Number Served</h3>
 
-                <p>Serves {numberServed} people.</p>
+                <p>Serves {numberServed}</p>
               </div>
 
               <div>
