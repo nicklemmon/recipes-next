@@ -3,10 +3,19 @@ import classNames from 'classnames'
 import Link from 'next/link'
 
 export default function PageLink(props) {
-  const { onClick, onKeyDown, children, href, className, rel, target } = props
+  const {
+    onClick,
+    onKeyDown,
+    children,
+    href,
+    className,
+    rel,
+    query,
+    target,
+  } = props
 
   return (
-    <Link href={href} passHref onKeyDown={onKeyDown}>
+    <Link href={{ pathname: href, query }} passHref onKeyDown={onKeyDown}>
       <a
         className={classNames('underline', className)}
         data-id={props['data-id']}

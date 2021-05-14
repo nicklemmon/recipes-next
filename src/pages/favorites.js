@@ -37,6 +37,7 @@ export default function SubcategoryPage({ recipes }) {
                   <Table.Cell>
                     <PageLink
                       href={`/${recipe.category.id}/${recipe.subcategory.id}/${recipe.id}`}
+                      query={{ source: 'favorites' }}
                       className="text-blue-600"
                     >
                       {recipe.title}
