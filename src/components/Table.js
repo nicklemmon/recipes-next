@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Table({ children }) {
+export function Table({ children }) {
   return (
     <div className="overflow-x-scroll w-full">
       <table className="border-collapse bg-white w-full">{children}</table>
@@ -28,5 +28,3 @@ Table.Caption = Caption
 Table.Row = Row
 Table.HeadCell = HeadCell
 Table.Cell = Cell
-
-export default Table

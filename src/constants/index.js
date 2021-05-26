@@ -73,7 +73,7 @@ export const CATEGORIES = [
     ],
   },
   {
-    name: 'Drink',
+    name: 'Drinks',
     id: 'drink',
     icon: '🍸',
     subcategories: [

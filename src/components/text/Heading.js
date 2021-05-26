@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export default function Heading({ as, looksLike, children, className }) {
+export function Heading({ as, looksLike, children, className }) {
   const looksLikeClassNames = looksLike
     ? getHeadingClassNames(looksLike)
     : getHeadingClassNames(as)

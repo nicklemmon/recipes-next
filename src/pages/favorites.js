@@ -14,7 +14,12 @@ export default function SubcategoryPage({ recipes }) {
       <Head>
         <title>Favorites | {SITE_TITLE}</title>
       </Head>
-      <Page title="Favorites">
+
+      <Page>
+        <Page.Header>
+          <Page.Title>Favorites</Page.Title>
+        </Page.Header>
+
         <Table>
           <Table.Caption>Favorite Recipes</Table.Caption>
 

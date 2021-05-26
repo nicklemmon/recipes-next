@@ -1,2 +1,2 @@
-export { default as Default } from './Default'
-export { default as Page } from './Page'
+export { Default } from './Default'
+export { Page } from './Page'

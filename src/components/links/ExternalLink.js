@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageLink } from 'src/components/links'
 
-export default function ExternalLink(props) {
+export function ExternalLink(props) {
   const { children, className } = props
 
   return (
