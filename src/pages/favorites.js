@@ -91,14 +91,13 @@ export async function getStaticProps() {
       const currentSubcategory = currentCategory.subcategories.find(
         subcategory => subcategory.name === recipe.subcategory
       )
-      const likedBy = recipe.likedBy.map(id => getFamilyMember(id))
 
       return {
+        ...recipe,
         title: recipe.title,
         id: titleToId(recipe.title),
         category: currentCategory,
         subcategory: currentSubcategory,
-        likedBy,
       }
     })
 
