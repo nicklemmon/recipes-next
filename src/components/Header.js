@@ -47,6 +47,7 @@ function SearchModal({ onClose }) {
     e.preventDefault()
 
     router.push(`/search-results?search=${search}`)
+    onClose()
   }
 
   return (

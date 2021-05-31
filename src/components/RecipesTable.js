@@ -3,7 +3,6 @@ import { PageLink } from 'src/components/links'
 import { Table, Tag } from 'src/components'
 
 export function RecipesTable({ className, caption, recipes }) {
-  console.log('recipes', recipes)
   return (
     <Table className={className}>
       <Table.Caption>{caption}</Table.Caption>

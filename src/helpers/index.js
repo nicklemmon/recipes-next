@@ -17,8 +17,11 @@ export function getRecipe(id) {
   const { category, subcategory } = data
   const categoryId = getCategoryId(category)
   const subcategoryId = getSubcategoryId(category, subcategory)
+  const likedBy = data.likedBy
+    ? data.likedBy.map(id => getFamilyMember(id))
+    : []
 
-  return { ...data, categoryId, subcategoryId, slug }
+  return { ...data, categoryId, subcategoryId, slug, likedBy }
 }
 
 /**

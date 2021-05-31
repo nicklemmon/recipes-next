@@ -140,3 +140,7 @@ export const FAMILY_MEMBERS = [
     color: 'pink',
   },
 ]
+
+export const PORTAL_IDS = {
+  MODAL: 'modal-portal',
+}

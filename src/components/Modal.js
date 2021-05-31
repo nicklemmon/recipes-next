@@ -38,17 +38,17 @@ export function Modal({ children, title, className, onClose }) {
       >
         <FocusLock returnFocus={true}>
           <div className="p-6 relative" tabIndex="-1">
-            <button onClick={onClose} className="absolute top-0 right-0 p-4">
-              <ScreenReaderOnly>Close Dialog</ScreenReaderOnly>
-
-              <Icon as={<ImCross className="text-indigo-600" />} />
-            </button>
-
             <div className="mb-5">
               <Heading as="h3">{title}</Heading>
             </div>
 
             {children}
+
+            <button onClick={onClose} className="absolute top-0 right-0 p-4">
+              <ScreenReaderOnly>Close Dialog</ScreenReaderOnly>
+
+              <Icon as={<ImCross className="text-indigo-600" />} />
+            </button>
           </div>
         </FocusLock>
       </div>

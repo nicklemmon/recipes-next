@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
-import { getAllRecipes, getFamilyMember } from 'src/helpers'
+import { getAllRecipes } from 'src/helpers'
 import { Page } from 'src/components/layouts'
 import { RecipesTable } from 'src/src/components/RecipesTable'
 
@@ -63,22 +63,11 @@ export async function getStaticProps({ params }) {
     subcategory => subcategory.id === params.subcategory
   )
   // Filter recipes based on the recipe category and subcategory referencing the core config
-  const recipes = getAllRecipes()
-    .filter(
-      recipe =>
-        recipe.category === currentCategory.name &&
-        recipe.subcategory === currentSubcategory.name
-    )
-    .map(recipe => {
-      const likedBy = recipe.likedBy
-        ? recipe.likedBy.map(id => getFamilyMember(id))
-        : []
-
-      return {
-        ...recipe,
-        likedBy,
-      }
-    })
+  const recipes = getAllRecipes().filter(
+    recipe =>
+      recipe.category === currentCategory.name &&
+      recipe.subcategory === currentSubcategory.name
+  )
 
   return {
     props: {
