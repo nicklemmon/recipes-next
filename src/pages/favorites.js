@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
-import { titleToId, getAllRecipes, getFamilyMember } from 'src/helpers'
+import { titleToId, getAllRecipes } from 'src/helpers'
 import { Page } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
 import { Table, Tag } from 'src/components'
