@@ -29,10 +29,10 @@ export default function SearchResultsPage({ recipes }) {
         <div className="mb-8">
           {search ? (
             <p>
-              Recipes matching <Bold>&ldquo;{search}&rdquo;</Bold>.
+              Searched <Bold>&ldquo;{search}&rdquo;</Bold>.
             </p>
           ) : (
-            <p>No search provided - no results.</p>
+            <p>No search provided - no recipes found.</p>
           )}
         </div>
 
@@ -41,7 +41,9 @@ export default function SearchResultsPage({ recipes }) {
             caption={`Recipes filtered by ${search}`}
             recipes={filteredRecipes}
           />
-        ) : null}
+        ) : (
+          <p>No matching recipes found.</p>
+        )}
       </Page>
     </>
   )
