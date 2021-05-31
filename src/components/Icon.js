@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Icon({ as, label, size, fill = 'inherit' }) {
+export function Icon({ as, className, label, size, fill = 'inherit' }) {
   const role = label ? 'img' : 'presentation'
   const ariaLabel = label ? label : null
   const styles = {
@@ -9,7 +9,12 @@ export function Icon({ as, label, size, fill = 'inherit' }) {
   }
 
   return (
-    <span role={role} aria-label={ariaLabel} style={styles}>
+    <span
+      className={className}
+      role={role}
+      aria-label={ariaLabel}
+      style={styles}
+    >
       {as}
     </span>
   )
