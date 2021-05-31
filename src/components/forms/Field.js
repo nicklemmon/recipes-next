@@ -5,27 +5,31 @@ function Field({
   id,
   name,
   className,
+  autoComplete,
   children,
   type,
+  required,
   onChange,
   onFocus,
   onBlur,
 }) {
   const baseStyles =
-    'overflow-hidden bg-white flex w-full rounded-3xl border outline-none'
+    'overflow-hidden bg-white flex w-full rounded border border-gray-300 outline-none'
   const focusStyles =
     'focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-opacity-50'
 
   return (
     <div className={classNames(baseStyles, focusStyles, className)}>
       <input
-        className="px-2 py-1 focus:outline-none"
+        className="px-2 py-2 w-full h-full focus:outline-none"
         id={id}
         name={name}
         type={type}
         onChange={onChange}
         onBlur={onBlur}
         onFocus={onFocus}
+        autoComplete={autoComplete}
+        required={required}
       />
 
       {children}

@@ -4,7 +4,7 @@ import { matchSorter } from 'match-sorter'
 import Head from 'next/head'
 import { Page } from 'src/components/layouts'
 import { Bold } from 'src/components/text'
-import { getAllRecipes } from 'src/helpers'
+import { getAllRecipes, getFamilyMember } from 'src/helpers'
 import { SITE_TITLE } from 'src/constants'
 import { RecipesTable } from 'src/components'
 
@@ -32,7 +32,7 @@ export default function SearchResultsPage({ recipes }) {
               Recipes matching <Bold>&ldquo;{search}&rdquo;</Bold>.
             </p>
           ) : (
-            <p>Nothing to search by!.</p>
+            <p>No search provided - no results.</p>
           )}
         </div>
 
@@ -48,7 +48,17 @@ export default function SearchResultsPage({ recipes }) {
 }
 
 export async function getStaticProps() {
-  const recipes = getAllRecipes()
+  const recipes = getAllRecipes().map(recipe => {
+    // TODO: There should probably be a helper for handling table-friendly re-formatting that can handle this
+    const likedBy = recipe.likedBy
+      ? recipe.likedBy.map(id => getFamilyMember(id))
+      : []
+
+    return {
+      ...recipe,
+      likedBy,
+    }
+  })
 
   return {
     props: { recipes },
