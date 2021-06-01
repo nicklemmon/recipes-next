@@ -3,7 +3,7 @@ import { Default } from 'src/components/layouts'
 import { Heading } from 'src/components/text'
 import { PageLink } from 'src/components/links'
 
-function Page({ children }) {
+export function Page({ children }) {
   return <Default>{children}</Default>
 }
 
@@ -32,5 +32,3 @@ function Breadcrumbs({ children, href }) {
 Page.Header = Header
 Page.Title = Title
 Page.Breadcrumbs = Breadcrumbs
-
-export default Page

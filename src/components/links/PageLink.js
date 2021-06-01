@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import Link from 'next/link'
 
-export default function PageLink(props) {
+export function PageLink(props) {
   const {
     onClick,
     onKeyDown,

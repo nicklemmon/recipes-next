@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageLink } from 'src/components/links'
 
-export default function Footer() {
+export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (

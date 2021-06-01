@@ -73,7 +73,7 @@ export const CATEGORIES = [
     ],
   },
   {
-    name: 'Drink',
+    name: 'Drinks',
     id: 'drink',
     icon: '🍸',
     subcategories: [
@@ -140,3 +140,7 @@ export const FAMILY_MEMBERS = [
     color: 'pink',
   },
 ]
+
+export const PORTAL_IDS = {
+  MODAL: 'modal-portal',
+}

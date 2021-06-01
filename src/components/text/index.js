@@ -1,1 +1,2 @@
-export { default as Heading } from './Heading'
+export { Bold } from './Bold'
+export { Heading } from './Heading'
