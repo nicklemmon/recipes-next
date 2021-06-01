@@ -1,6 +1,6 @@
 import React from 'react'
 
-function GridList({ children }) {
+export function GridList({ children }) {
   return (
     <div
       role="list"
@@ -21,5 +21,3 @@ function Item({ children }) {
 
 Item.displayName = 'GridList.Item'
 GridList.Item = Item
-
-export default GridList

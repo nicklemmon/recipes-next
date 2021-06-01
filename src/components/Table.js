@@ -1,7 +1,11 @@
 import React from 'react'
 
-function Table({ children }) {
-  return <table className="border-collapse bg-white w-full">{children}</table>
+export function Table({ children }) {
+  return (
+    <div className="overflow-x-scroll w-full">
+      <table className="border-collapse bg-white w-full">{children}</table>
+    </div>
+  )
 }
 
 function Caption({ children }) {
@@ -9,7 +13,7 @@ function Caption({ children }) {
 }
 
 function Row({ children }) {
-  return <tr className="text-left border">{children}</tr>
+  return <tr className="text-left border overflow-x-scroll">{children}</tr>
 }
 
 function HeadCell({ children }) {
@@ -17,12 +21,10 @@ function HeadCell({ children }) {
 }
 
 function Cell({ children }) {
-  return <td className="p-5 text-gray-500">{children}</td>
+  return <td className="p-5 text-gray-500 whitespace-nowrap">{children}</td>
 }
 
 Table.Caption = Caption
 Table.Row = Row
 Table.HeadCell = HeadCell
 Table.Cell = Cell
-
-export default Table

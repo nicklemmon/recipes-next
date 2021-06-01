@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { SITE_TITLE } from 'src/constants'
 import { getAllRecipes, getRecipe } from 'src/helpers'
 import { CATEGORIES } from 'src/constants'
@@ -19,6 +20,11 @@ export default function RecipePage({ category, subcategory, recipe }) {
     ingredients,
     steps,
   } = recipe
+  const { query } = useRouter()
+  const backHref =
+    query.source === 'favorites' ? '/favorites' : `/${category}/${subcategory}`
+  const backToTarget =
+    query.source === 'favorites' ? 'favorites' : recipeSubcategory
 
   return (
     <>
@@ -32,8 +38,8 @@ export default function RecipePage({ category, subcategory, recipe }) {
         <Page.Header>
           <Page.Title>{title}</Page.Title>
 
-          <Page.Breadcrumbs href={`/${category}/${subcategory}`}>
-            Back to {subcategory}
+          <Page.Breadcrumbs href={backHref}>
+            Back to {backToTarget}
           </Page.Breadcrumbs>
         </Page.Header>
 
@@ -79,13 +85,13 @@ export default function RecipePage({ category, subcategory, recipe }) {
               <div className="mb-3">
                 <h3 className="text-base font-semibold">Cook Time</h3>
 
-                <p>{cookTime} minutes to prepare</p>
+                <p>{cookTime}</p>
               </div>
 
               <div className="mb-3">
                 <h3 className="text-base font-semibold">Number Served</h3>
 
-                <p>Serves {numberServed} people.</p>
+                <p>Serves {numberServed}</p>
               </div>
 
               <div>

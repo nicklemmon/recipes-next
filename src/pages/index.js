@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
 import { CardLink } from 'src/components/links'
 import { Icon, GridList } from 'src/components'
-import { Page } from '../components/layouts'
+import { Page } from 'src/components/layouts'
 
 export default function Home() {
   const renderedCategories = [

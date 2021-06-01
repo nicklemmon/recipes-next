@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { CATEGORIES, SITE_TITLE } from 'src/constants'
-import { titleToId, getAllRecipes, getFamilyMember } from 'src/helpers'
+import { titleToId, getAllRecipes } from 'src/helpers'
 import { Page } from 'src/components/layouts'
 import { PageLink } from 'src/components/links'
 import { Table, Tag } from 'src/components'
@@ -14,7 +14,12 @@ export default function SubcategoryPage({ recipes }) {
       <Head>
         <title>Favorites | {SITE_TITLE}</title>
       </Head>
-      <Page title="Favorites">
+
+      <Page>
+        <Page.Header>
+          <Page.Title>Favorites</Page.Title>
+        </Page.Header>
+
         <Table>
           <Table.Caption>Favorite Recipes</Table.Caption>
 
@@ -37,6 +42,7 @@ export default function SubcategoryPage({ recipes }) {
                   <Table.Cell>
                     <PageLink
                       href={`/${recipe.category.id}/${recipe.subcategory.id}/${recipe.id}`}
+                      query={{ source: 'favorites' }}
                       className="text-blue-600"
                     >
                       {recipe.title}
@@ -85,20 +91,16 @@ export async function getStaticProps() {
       const currentSubcategory = currentCategory.subcategories.find(
         subcategory => subcategory.name === recipe.subcategory
       )
-      const likedBy = recipe.likedBy.map(id => getFamilyMember(id))
 
       return {
-        title: recipe.title,
+        ...recipe,
         id: titleToId(recipe.title),
         category: currentCategory,
         subcategory: currentSubcategory,
-        likedBy,
       }
     })
 
   return {
-    props: {
-      recipes,
-    },
+    props: { recipes },
   }
 }
