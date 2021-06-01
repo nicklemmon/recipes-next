@@ -25,7 +25,7 @@
     "@fullhuman/postcss-purgecss": "4.0.3",
     "eslint": "7.11.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-react": "7.21.4",
+    "eslint-plugin-react": "7.24.0",
     "husky": "4.3.0",
     "lint-staged": "10.4.0",
     "postcss-preset-env": "6.7.0",
