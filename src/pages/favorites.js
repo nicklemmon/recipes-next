@@ -94,7 +94,6 @@ export async function getStaticProps() {
 
       return {
         ...recipe,
-        title: recipe.title,
         id: titleToId(recipe.title),
         category: currentCategory,
         subcategory: currentSubcategory,
@@ -102,8 +101,6 @@ export async function getStaticProps() {
     })
 
   return {
-    props: {
-      recipes,
-    },
+    props: { recipes },
   }
 }
