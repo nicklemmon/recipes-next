@@ -9,11 +9,17 @@ export function Button({
   className,
 }) {
   const sharedStyles = 'flex px-3 py-2 text-base rounded'
+  const focusStyles = 'focus:ring-4 focus:ring-indigo-600 focus:ring-opacity-50'
   const variantStyles = getVariantStyles(variant)
 
   return (
     <button
-      className={classNames(sharedStyles, variantStyles, className)}
+      className={classNames(
+        sharedStyles,
+        focusStyles,
+        variantStyles,
+        className
+      )}
       onClick={onClick}
       type={type}
     >

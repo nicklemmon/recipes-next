@@ -30,7 +30,7 @@ export default function SearchResultsPage({ recipes }) {
         <div className="mb-8">
           {search ? (
             <p>
-              Searched <Bold>&ldquo;{search}&rdquo;</Bold>.
+              Results for <Bold>&ldquo;{search}&rdquo;</Bold>
             </p>
           ) : (
             <p>No search provided - no recipes found.</p>
