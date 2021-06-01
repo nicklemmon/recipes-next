@@ -33,7 +33,7 @@ function getColorClasses(color) {
   }
 }
 
-export default function Tag({ children, color, className }) {
+export function Tag({ children, color, className }) {
   const colorClasses = getColorClasses(color)
 
   return (

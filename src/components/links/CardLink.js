@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { PageLink } from 'src/components/links'
 
-export default function CardLink({ as = PageLink, href, children, className }) {
+export function CardLink({ as = PageLink, href, children, className }) {
   const Component = as
   const hoverStyles = 'hover:shadow hover:text-blue-500 hover:border-indigo-200'
   const focusStyles =

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer, Header } from 'src/components'
 
-export default function Default({ children }) {
+export function Default({ children }) {
   return (
     <div className="h-full min-h-screen flex flex-col bg-indigo-50">
       <Header />
