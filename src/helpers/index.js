@@ -12,7 +12,7 @@ function getRecipeSlugs() {
 export function getRecipe(id) {
   const filePath = join(recipesDirectory, id)
   const fileContent = fs.readFileSync(filePath, 'utf8')
-  const data = yaml.safeLoad(fileContent)
+  const data = yaml.load(fileContent)
   const slug = id.replace('.yml', '')
   const { category, subcategory } = data
   const categoryId = getCategoryId(category)
