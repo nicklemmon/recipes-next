@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "7.14.3",
     "@fullhuman/postcss-purgecss": "4.0.3",
-    "eslint": "7.27.0",
+    "eslint": "8.1.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-react": "7.24.0",
     "husky": "4.3.0",
