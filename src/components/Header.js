@@ -15,7 +15,7 @@ export function Header() {
         <div />
 
         <div className="flex items-center justify-center">
-          <PageLink className="no-underline font-semibold" href="/">
+          <PageLink className="no-underline font-semibold text-center" href="/">
             Nick &amp; Laurie&rsquo;s Recipe Collection
           </PageLink>
         </div>
