@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf .next",
-    "start": "npm run clean && next dev",
-    "build": "npm run clean && next build",
+    "start": "yarn clean && next dev",
+    "build": "yarn clean && next build",
     "serve": "next start"
   },
   "dependencies": {
