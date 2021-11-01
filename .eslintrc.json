@@ -4,7 +4,12 @@
     "es6": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:@next/next/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 9,
     "ecmaFeatures": {
@@ -12,6 +17,11 @@
       "jsx": true
     },
     "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "plugins": ["react"],
   "rules": {
