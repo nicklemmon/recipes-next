@@ -28,7 +28,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-react": "7.28.0",
     "husky": "7.0.4",
-    "lint-staged": "10.4.0",
+    "lint-staged": "12.1.7",
     "postcss-preset-env": "7.2.3",
     "prettier": "2.5.1"
   },
