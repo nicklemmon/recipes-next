@@ -33,12 +33,8 @@
     "postcss-preset-env": "7.7.0",
     "prettier": "2.6.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,css,md}": "prettier --write",
+    "*.js": "eslint --cache --fix"
   }
 }
