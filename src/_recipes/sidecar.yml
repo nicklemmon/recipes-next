@@ -1,0 +1,21 @@
+title: Sidecar
+category: 'Drinks'
+subcategory: 'Alcoholic'
+review: 5
+cookTime: 5
+numberServed: 1
+source: http://liquor.com
+likedBy:
+  - nick
+  - laurie
+ingredients:
+  - 1 1/2 ounces cognac
+  - 3/4 ounce orange liqueur (such as Cointreau)
+  - 3/4 ounce lemon juice, freshly squeezed
+  - orange twist
+  - sugar rim (optional)
+steps:
+  - Coat the rim of a coupe glass with sugar, if desired, and set aside.
+  - Add the cognac, orange liqueur and lemon juice to a shaker with ice and shake until well-chilled.
+  - Strain into the prepared glass.
+  - Garnish with an orange twist.
